@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node listen.js",
-    "dev": "nodemon listen.js"
+    "dev": "nodemon listen.js",
+    "build":"pm2 start listen.js"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,8 @@
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
     "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "pm2": "^4.4.1"
   }
 }
