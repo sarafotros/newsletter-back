@@ -3,10 +3,11 @@ const apiMethod = require('../API')
 const uniqid = require('uniqid');
 
 const addUser = (req, res, next)=>{
-    const { email} = req.body;
+    const { email } = req.body;
     const obj = {
         id: uniqid(),
-        email: email}
+        email: email
+    }
     apiMethod.post('subscribe', obj)
         .then(resp=> {
             console.log(resp);
