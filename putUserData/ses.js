@@ -47,7 +47,7 @@ exports.handler = async (event, context) => {
      ...
    `;
 
-  // // Create sendEmail params
+  // Create sendEmail params
    const emailParams = {
      Destination: {
        ToAddresses: ['sarafotros@gmail.com', 'sf.ofoghnet@gmail.com']
@@ -75,11 +75,11 @@ exports.handler = async (event, context) => {
    SES.sendEmail(emailParams, function (err, data) {
          // callback(null, {err: err, data: data});
          if (err) {
-             console.log('errrrrrrrrrrror',err);
+             console.log('error',err);
              context.fail(err);
          } else {
             
-             console.log('succeeeed',data);
+             console.log('succeed',data);
              context.succeed(event);
          }
      });
